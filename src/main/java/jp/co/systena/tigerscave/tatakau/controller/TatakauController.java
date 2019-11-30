@@ -9,24 +9,49 @@ import org.springframework.web.servlet.ModelAndView;
 public class TatakauController {
 
 	// キャラ作成画面を送る
-	@RequestMapping(value = "/create/chara", method = RequestMethod.GET)
-	public ModelAndView getMakenai(ModelAndView mav) {
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public ModelAndView getCharaCreatePage(ModelAndView mav) {
 
 
 
-		mav.setViewName("tatakau");
+		mav.setViewName("");
 		return mav;
 	}
 
-	@RequestMapping(value = "/create/", method = RequestMethod.GET)
+
 
 	// 送られてきたキャラクター情報と敵の情報保存してから、キャラクター一覧画面を送る
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public ModelAndView postCharaSavePage(ModelAndView mav) {
+
+
+
+        mav.setViewName("");
+        return mav;
+    }
+
 
 
 
 	// キャラクターこうげき画面を送る
+    @RequestMapping(value = "/attack", method = RequestMethod.GET)
+    public ModelAndView getCharaAttackPage(ModelAndView mav) {
+
+
+
+        mav.setViewName("");
+        return mav;
+    }
 
 	// キャラクターかいふく画面を送る
+    @RequestMapping(value = "/recover", method = RequestMethod.GET)
+    public ModelAndView getCharaRecoverPage(ModelAndView mav) {
+
+
+
+        mav.setViewName("");
+        return mav;
+    }
 
 
 
